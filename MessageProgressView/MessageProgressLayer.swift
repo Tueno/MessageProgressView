@@ -6,6 +6,8 @@
 //  Copyright © 2016年 Tomonori Ueno. All rights reserved.
 //
 
+import UIKit
+
 public class MessageProgressLayer: CALayer {
     
     private let diameter: CGFloat

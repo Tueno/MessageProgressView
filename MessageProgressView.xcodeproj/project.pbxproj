@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		755EB5FB1D3E1AAE00E31803 /* MessageProgressView.h in Headers */ = {isa = PBXBuildFile; fileRef = 75BF9DD51D3DB65300895ED4 /* MessageProgressView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		755EB5FC1D3E1AB200E31803 /* MessageProgressLayer.swift in Headers */ = {isa = PBXBuildFile; fileRef = 75863A701D3DD7BB00094070 /* MessageProgressLayer.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		75863A711D3DD7BB00094070 /* MessageProgressLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75863A701D3DD7BB00094070 /* MessageProgressLayer.swift */; };
-		75BF9DD61D3DB65300895ED4 /* MessageProgressView.h in Headers */ = {isa = PBXBuildFile; fileRef = 75BF9DD51D3DB65300895ED4 /* MessageProgressView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		75B901241D3E192400C8639E /* MessageProgressView.swift in Headers */ = {isa = PBXBuildFile; fileRef = 75BF9DEC1D3DB67D00895ED4 /* MessageProgressView.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		75BF9DDD1D3DB65300895ED4 /* MessageProgressView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75BF9DD21D3DB65300895ED4 /* MessageProgressView.framework */; };
 		75BF9DE21D3DB65300895ED4 /* MessageProgressViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF9DE11D3DB65300895ED4 /* MessageProgressViewTests.swift */; };
 		75BF9DED1D3DB67D00895ED4 /* MessageProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF9DEC1D3DB67D00895ED4 /* MessageProgressView.swift */; };
@@ -99,7 +101,9 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				75BF9DD61D3DB65300895ED4 /* MessageProgressView.h in Headers */,
+				755EB5FB1D3E1AAE00E31803 /* MessageProgressView.h in Headers */,
+				75B901241D3E192400C8639E /* MessageProgressView.swift in Headers */,
+				755EB5FC1D3E1AB200E31803 /* MessageProgressLayer.swift in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
