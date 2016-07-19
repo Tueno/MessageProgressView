@@ -18,7 +18,9 @@ import UIKit
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        commonInit()
+        #if !TARGET_INTERFACE_BUILDER
+            commonInit()
+        #endif
     }
     
     required public init?(coder aDecoder: NSCoder) {
