@@ -38,11 +38,11 @@ import UIKit
         layer.addSublayer(progressLayer)
     }
     
-    func startAnimation() {
+    public func startAnimation() {
         progressLayer.startAnimation()
     }
     
-    func stopAnimation() {
+    public func stopAnimation() {
         progressLayer.stopAnimation()
     }
     
