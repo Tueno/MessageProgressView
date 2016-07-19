@@ -8,7 +8,8 @@
 
 import UIKit
 
-@IBDesignable public class MessageProgressView: UIView {
+@IBDesignable
+public class MessageProgressView: UIView {
     
     @IBInspectable public var diameter: CGFloat = 8
     @IBInspectable public var margin: CGFloat   = 6
