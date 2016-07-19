@@ -8,7 +8,7 @@
 
 import UIKit
 
-@IBDesignable class MessageProgressView: UIView {
+@IBDesignable public class MessageProgressView: UIView {
     
     @IBInspectable var diameter: CGFloat = 8
     @IBInspectable var margin: CGFloat   = 6
@@ -21,11 +21,11 @@ import UIKit
         commonInit()
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     
-    override func awakeFromNib() {
+    override public func awakeFromNib() {
         super.awakeFromNib()
         commonInit()
     }
@@ -46,7 +46,7 @@ import UIKit
         progressLayer.stopAnimation()
     }
     
-    override func prepareForInterfaceBuilder() {
+    override public func prepareForInterfaceBuilder() {
         super.prepareForInterfaceBuilder()
         commonInit()
     }
