@@ -330,7 +330,7 @@
 				INFOPLIST_FILE = MessageProgressView/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tueno.MessageProgressView.MessageProgressView;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tueno.MessageProgressView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -348,7 +348,7 @@
 				INFOPLIST_FILE = MessageProgressView/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tueno.MessageProgressView.MessageProgressView;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tueno.MessageProgressView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -359,7 +359,7 @@
 			buildSettings = {
 				INFOPLIST_FILE = MessageProgressViewTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tueno.MessageProgressView.MessageProgressViewTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tueno.MessageProgressViewTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -369,7 +369,7 @@
 			buildSettings = {
 				INFOPLIST_FILE = MessageProgressViewTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tueno.MessageProgressView.MessageProgressViewTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tueno.MessageProgressViewTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
