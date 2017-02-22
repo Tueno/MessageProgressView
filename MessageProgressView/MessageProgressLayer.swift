@@ -8,13 +8,13 @@
 
 import UIKit
 
-public class MessageProgressLayer: CALayer {
+open class MessageProgressLayer: CALayer {
     
-    private let diameter: CGFloat
-    private let margin: CGFloat
-    private let numberOfDots: Int
-    private let dotColor: UIColor
-    private var circleShapeLayers: [CAShapeLayer] = []
+    fileprivate let diameter: CGFloat
+    fileprivate let margin: CGFloat
+    fileprivate let numberOfDots: Int
+    fileprivate let dotColor: UIColor
+    fileprivate var circleShapeLayers: [CAShapeLayer] = []
     
     init(diameter: CGFloat, margin: CGFloat, numberOfDots: Int, dotColor: UIColor) {
         self.diameter     = diameter
@@ -29,18 +29,18 @@ public class MessageProgressLayer: CALayer {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func initShapeLayers() {
-        for i in 0.stride(to: numberOfDots, by: 1) {
+    fileprivate func initShapeLayers() {
+        for i in stride(from: 0, to: numberOfDots, by: 1) {
             let shapeLayer = CAShapeLayer()
-            shapeLayer.path      = UIBezierPath(ovalInRect: CGRect(x: 0, y: 0, width: diameter, height: diameter)).CGPath
-            shapeLayer.fillColor = dotColor.CGColor
+            shapeLayer.path      = UIBezierPath(ovalIn: CGRect(x: 0, y: 0, width: diameter, height: diameter)).cgPath
+            shapeLayer.fillColor = dotColor.cgColor
             shapeLayer.position  = CGPoint(x: CGFloat(i) * (diameter + margin) + margin, y: 0)
             addSublayer(shapeLayer)
             circleShapeLayers.append(shapeLayer)
         }
     }
     
-    public func startAnimation() {
+    open func startAnimation() {
         let duration                     = 0.3
         let group                        = CAAnimationGroup()
         group.repeatCount                = Float.infinity
@@ -49,18 +49,18 @@ public class MessageProgressLayer: CALayer {
         yTranslation.fromValue           = 0
         yTranslation.toValue             = diameter * -1
         yTranslation.duration            = duration
-        yTranslation.removedOnCompletion = false
+        yTranslation.isRemovedOnCompletion = false
         yTranslation.autoreverses        = true
-        for i in 0.stride(to: circleShapeLayers.count, by: 1) {
+        for i in stride(from: 0, to: circleShapeLayers.count, by: 1) {
             let layer = circleShapeLayers[i]
             group.beginTime = CACurrentMediaTime() + Double(i) * yTranslation.duration * 0.5
             group.animations = [yTranslation]
-            layer.addAnimation(group, forKey: "jump")
+            layer.add(group, forKey: "jump")
         }
     }
     
-    public func stopAnimation() {
-        for i in 0.stride(to: circleShapeLayers.count, by: 1) {
+    open func stopAnimation() {
+        for i in stride(from: 0, to: circleShapeLayers.count, by: 1) {
             let layer = circleShapeLayers[i]
             layer.removeAllAnimations()
             layer.transform = CATransform3DIdentity

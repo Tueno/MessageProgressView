@@ -9,13 +9,13 @@
 import UIKit
 
 @IBDesignable
-public class MessageProgressView: UIView {
+open class MessageProgressView: UIView {
     
-    @IBInspectable public var diameter: CGFloat = 8
-    @IBInspectable public var margin: CGFloat   = 6
-    @IBInspectable public var numberOfDots: Int = 3
-    @IBInspectable public var dotColor: UIColor = UIColor(red: 0.847, green: 0.847, blue: 0.847, alpha: 1.0)
-    private var progressLayer: MessageProgressLayer!
+    @IBInspectable open var diameter: CGFloat = 8
+    @IBInspectable open var margin: CGFloat   = 6
+    @IBInspectable open var numberOfDots: Int = 3
+    @IBInspectable open var dotColor: UIColor = UIColor(red: 0.847, green: 0.847, blue: 0.847, alpha: 1.0)
+    fileprivate var progressLayer: MessageProgressLayer!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -28,12 +28,12 @@ public class MessageProgressView: UIView {
         super.init(coder: aDecoder)
     }
     
-    override public func awakeFromNib() {
+    override open func awakeFromNib() {
         super.awakeFromNib()
         commonInit()
     }
     
-    private func commonInit() {
+    fileprivate func commonInit() {
         let layerFrame         = CGRect(x: 0, y: 0, width: CGFloat(numberOfDots) * (diameter + margin) + margin, height: diameter)
         progressLayer          = MessageProgressLayer(diameter: diameter, margin: margin, numberOfDots: numberOfDots, dotColor: dotColor)
         progressLayer.frame    = layerFrame
@@ -41,15 +41,15 @@ public class MessageProgressView: UIView {
         layer.addSublayer(progressLayer)
     }
     
-    public func startAnimation() {
+    open func startAnimation() {
         progressLayer.startAnimation()
     }
     
-    public func stopAnimation() {
+    open func stopAnimation() {
         progressLayer.stopAnimation()
     }
     
-    override public func prepareForInterfaceBuilder() {
+    override open func prepareForInterfaceBuilder() {
         super.prepareForInterfaceBuilder()
         commonInit()
     }
